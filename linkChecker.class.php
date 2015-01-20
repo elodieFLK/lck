@@ -22,19 +22,17 @@ Class LinkChecker{
     private $HTML = "";
     private $headers = "";
     private $error = array();
+    private $file_host = "host.json";
 
     const BYTE_MULTIPLICATOR = 1024;
 
-    public function __construct($link, $check_size = true){
+    public function __construct($link, $check_size = false){
         global $db;
         $this->db = $db;
         $this->check_size = $check_size;
 
         //on génère les configs
-        $result = $db->query("SELECT * FROM ".$db->prefix."plugin_lck_config ORDER BY id") or error('Unable to select LinkChecker Configs', __FILE__, __LINE__, $db->error());
-        while ($res = $db->fetch_assoc($result)) {
-            $this->config[$res['clef']] = $res['value'];
-        }
+        $this->config["size_regex"] = "~([0-9]+[\\.|,]*[0-9]*)\s*([K|M|G|T]*)[i]*[B|O]*~is";
 
         $this->startTime = microtime(true);
         $this->startMemory = memory_get_usage();
@@ -147,11 +145,13 @@ Class LinkChecker{
 
     public function foundHost(){
 
-        $result = $this->db->query("SELECT * FROM ".$this->db->prefix."plugin_lck_SH ORDER BY id") or error('Unable to select supported Hosts (SH)', __FILE__, __LINE__, $this->db->error());
-        while ($res = $this->db->fetch_assoc($result)) {
-            if(preg_match($res['name_regex'], $this->link)){
-                $this->current_host = $res;
-                $this->host = $res['name'];
+        $handle = fopen($this->file_host, "r");
+        $contents = fread($handle, filesize($this->file_host));
+        $list_host = json_decode($contents, true);
+        foreach ($list_host as $value) {
+            if(preg_match($value['name_regex'], $this->link)){
+                $this->current_host = $value;
+                $this->host = $value['name'];
             }
         }
 
@@ -170,6 +170,7 @@ Class LinkChecker{
         curl_setopt($ch, CURLOPT_URL, $this->link); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
         $headers = curl_getinfo($ch);
         $curl_error = curl_error($ch);

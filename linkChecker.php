@@ -5,8 +5,11 @@ $startMemory = memory_get_usage();
 $resultat = array();
 require "linkChecker.class.php";
 
-define('PUN_ROOT', dirname(dirname(dirname(__FILE__))).'/');
-require PUN_ROOT.'include/common.php';
+// $handle = fopen("host.json", "r");
+//         $contents = fread($handle, filesize("host.json"));
+//         $list_host = json_decode($contents);
+//         var_dump($list_host);
+//         die();
 
 $links = array(
     "https://1fichier.com/?4jf62b2mr4",
