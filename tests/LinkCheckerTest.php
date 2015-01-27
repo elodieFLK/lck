@@ -2,64 +2,93 @@
 require dirname(__DIR__)."/linkChecker.class.php";
 class phpUnit extends PHPUnit_Framework_TestCase 
 {
-    public function testLink1()
-    {
-        $linkChecker = new linkChecker("https://1fichier.com/?4jf62b2mr4");
-        $this->assertEquals($linkChecker->is_valid(), false);
-    }
+    private $links = array();
 
-    public function testLink2()
-    {
-        $linkChecker = new linkChecker("https://pzjcjv2sq9.1fichier.com/");
-        $this->assertEquals($linkChecker->is_valid(), true);
-    }
+    public function __construct(){
+        $this->links[] = array(
+                    "url"            => "https://1fichier.com/?4jf62b2mr4",
+                    "is_valid"       => false,
+                    "getFormatSize"    => "0Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "1fichier",
+                ); 
+        $this->links[] = array(
+                    "url"            => "https://pzjcjv2sq9.1fichier.com/",
+                    "is_valid"       => true,
+                    "getFormatSize"    => "1.42Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "1fichier",
+                );
+        $this->links[] = array(
+                    "url"            => "https://1fichier.com/dir/CiLKCBI6",
+                    "is_valid"       => false,
+                    "getFormatSize"    => "0Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "1fichier",
+                );
+        $this->links[] = array(
+                    "url"            => "https://1fichier.com/dir/CiLKCBI7",
+                    "is_valid"       => true,
+                    "getFormatSize"    => "431Kb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "1fichier",
+                );
+        $this->links[] = array(
+                    "url"            => "http://www.multiup.org/fr/download/a8ee679c6c86342eeacac0c828c2344f/Cal6loDAdv1ancedWar9fareUpd1-DarkZero.rar",
+                    "is_valid"       => true,
+                    "getFormatSize"    => "132.76Mb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "multiup",
+                );
+        $this->links[] = array(
+                    "url"            => "http://www.multiup.org/fr/download/3be2d8b9a2a7ad491e556821075e0944/bzh2696.rar",
+                    "is_valid"       => false,
+                    "getFormatSize"    => "0Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "multiup",
+                );
+        $this->links[] = array(
+                    "url"            => "https://depositfiles.com/files/iwuf30bkz",
+                    "is_valid"       => true,
+                    "getFormatSize"    => "1.22Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "depositfiles",
+                );
+        $this->links[] = array(
+                    "url"            => "http://dfiles.eu/files/fsusoerxm",
+                    "is_valid"       => false,
+                    "getFormatSize"    => "0Gb",
+                    "is_unknow_host" => false,
+                    "getHost"           => "depositfiles",
+                );
+    } 
 
-    public function testLink3()
+    public function test_is_valid()
     {
-        $linkChecker = new linkChecker("https://1fichier.com/dir/CiLKCBI6");
-        $this->assertEquals($linkChecker->is_valid(), false);
+        foreach($this->links as $value){
+            $linkChecker = new linkChecker($value["url"]);
+            $this->assertEquals($linkChecker->is_valid(), $value["is_valid"]);
+        }
     }
-
-    public function testLink4()
+    public function test_getFormatSize()
     {
-        $linkChecker = new linkChecker("https://1fichier.com/dir/CiLKCBI7");
-        $this->assertEquals($linkChecker->is_valid(), true);
+        foreach($this->links as $value){
+            $linkChecker = new linkChecker($value["url"]);
+            $this->assertEquals($linkChecker->getFormatSize(), $value["getFormatSize"]);
+        }
     }
-
-    public function testLink5()
+    public function test_is_unknow_host()
     {
-        $linkChecker = new linkChecker("http://www.multiup.org/fr/download/a8ee679c6c86342eeacac0c828c2344f/Cal6loDAdv1ancedWar9fareUpd1-DarkZero.rar");
-        $this->assertEquals($linkChecker->is_valid(), true);
+        foreach($this->links as $value){
+            $linkChecker = new linkChecker($value["url"]);
+            $this->assertEquals($linkChecker->is_unknow_host(), $value["is_unknow_host"]);
+        }
     }
-
-    public function testLink6()
+    public function test_getHost()
     {
-        $linkChecker = new linkChecker("http://www.multiup.org/fr/download/3be2d8b9a2a7ad491e556821075e0944/bzh2696.rar");
-        $this->assertEquals($linkChecker->is_valid(), false);
+        foreach($this->links as $value){
+            $linkChecker = new linkChecker($value["url"]);
+            $this->assertEquals($linkChecker->getHost(), $value["getHost"]);
+        }
     }
-
-    public function testLink7()
-    {
-        $linkChecker = new linkChecker("https://depositfiles.com/files/iwuf30bkz");
-        $this->assertEquals($linkChecker->is_valid(), true);
-    }
-
-    public function testLink8()
-    {
-        $linkChecker = new linkChecker("http://dfiles.eu/files/fsusoerxm");
-        $this->assertEquals($linkChecker->is_valid(), false);
-    }
-
-    public function testFormatSizeValide()
-    {
-        $linkChecker = new linkChecker("https://pzjcjv2sq9.1fichier.com/");
-        $this->assertEquals($linkChecker->getFormatSize(), "1.42Gb");
-    }
-
-    public function testFormatSizeInvalide()
-    {
-        $linkChecker = new linkChecker("https://1fichier.com/?4jf62b2mr4");
-        $this->assertEquals($linkChecker->getFormatSize(), "0Gb");
-    }
-
 }
