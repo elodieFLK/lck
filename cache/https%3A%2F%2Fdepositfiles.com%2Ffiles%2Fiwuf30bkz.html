@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+    <title>DepositFiles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="DepositFiles provides you with a legitimate technical solution, which  enables you to upload, store, access and download text, software,  scripts, images, sounds, videos, animations and any other materials in form of one or several electronic files.">
+
+<meta property="og:title" content="Deposit Files" />
+<meta property="og:image" content="https://static.depositfiles.com/images/speed_small_gold.gif" />
+<link rel="shortcut icon" type="image/ico" href="https://static.depositfiles.com/images/favicon.ico"/>
+
+<link rel="stylesheet" href="https://static.depositfiles.com/css/main.css" type="text/css" media="all" />
+	
+		<script type="text/javascript">
+			if (window.top != window.self) {
+				var cur = window.location.href;
+				if(cur.match(/\/files\//)){
+					top.location.href = cur;
+				}
+			}
+		</script>
+	
+
+<script type="text/javascript" src="https://static.depositfiles.com/js/base2.js"></script>
+<script type="text/javascript" src="https://static.depositfiles.com/js/jquery.validate.js"></script>
+<script type="text/javascript" src="https://static.depositfiles.com/js/function.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+<!--script src="https://static.depositfiles.com/js/xc-min.js" type="text/javascript"></script-->
+
+<script type="text/javascript">
+	var http_abs_path = 'https://depositfiles.com';
+	var http_static_path = 'https://static.depositfiles.com';
+	var ssl_static_path = 'https://static.depositfiles.com';
+	var http_ads_path = 'http://img2.depositfiles.com/adroot';
+	var lang = 'fr';
+	var user_country = 'FR';
+	document.domain = 'depositfiles.com';
+	
+	var RecaptchaOptions = {
+		theme : 'white',
+		lang : 'fr'
+	};
+	
+	$(document).ready(function(){
+		$(window).resize(function() {
+			var height = self.innerHeight || (document.documentElement && document.documentElement.clientHeight) || document.body.clientHeight;
+			$('#main').css('min-height', height - parseInt($('#main').css('padding-top')) - parseInt($('#main').css('padding-bottom')) - $('#foobar').outerHeight(true));
+		});
+		$(window).resize();
+	});
+	
+</script>
+
+</head>
+<body class="lang_fr page_download_gateway">
+		<div id="main">
+		<div class="top_menu">
+			<a href="https://depositfiles.com" id="logo"><span>service de cloud facile</span></a>
+			
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.login_block a[data-login-type=member]').click(function(evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+		$('.login_info').toggle();
+	});
+	$('.login_block .new_message').click(function() {
+		$(this).hide();
+	});
+	$('.profile_menu > li > a').not('.logout').click(function(evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+		$(this).next('ul').toggle();
+	});
+	$(document).click(function() {
+		$('.login_info').hide();
+	});
+});
+</script>
+
+<div class="login_block"  data-type="guest">
+	<a class="link" href="/login.php?return=%2Ffiles%2Fiwuf30bkz">
+		<span class="sprite user_icon"></span>
+		<strong>Connectez-vous</strong>
+	</a>
+</div>
+<div class="login_block" style="display: none;" data-type="member">
+	<a class="new_message" href="/tickets/history.php?new" title="Nouveau message: " style="display: none;"></a>
+	<a class="link" href="#" data-login-type="member">
+		<span class="sprite user_icon user_member"></span>
+		<strong data-id="username"></strong>
+		<span class="sprite profile_btn"></span>
+	</a>
+	<div class="login_info">
+		<ul class="profile_menu">
+			<li>
+				<a href="#">Mon profil</a>
+				<ul class="submenu">
+					<li><a href="/gold/profile.php" >Information personnelle</a></li>
+					<li><a href="/gold/profile.php?show=password" >Changer le mot de passe</a></li>
+									</ul>
+			</li>
+			<li>
+				<a href="#">Paiements</a>
+				<ul class="submenu">
+					<li><a href="/gold/payment.php" >DepositFiles Gold</a></li>
+					<li><a href="/gold/storage_payment.php" >La modernisation de DepositStorage</a></li>
+					<li><a href="/gold/payment_history.php" >Status</a></li>
+					<li><a href="/gold/payment_subscribe_manage.php" >Gérer les abonnements</a></li>
+				</ul>
+			</li>
+			<li><a class="logout" href="/logout.php">Déconnexion</a></li>
+		</ul>
+	</div>
+</div>			<ul class="df_menu">
+	<li class="" data-group-id="upload"><a href="/?upload=1" class="sprite upload_icon" title="Téléverser"></a></li>
+	<li class="" data-group-id="filemanager" style="display: none;"><a href="/gold/files_list.php" class="sprite manage_icon" title="Mes fichiers"></a></li>
+	<li class="" data-group-id="payment"><a href="/gold/payment.php" class="sprite payment_icon" title="Paiements"></a></li>
+	<li class="" data-group-id="loyalty"><a href="/gold_day.html" class="sprite loyalty_icon" title="Loyauté"></a></li>
+    <li class=""><a href="/halileo_affiliate_program.html" class="sprite stats_icon" title="Mes stats"></a></li>
+	<li class="" data-group-id="help"><a href="/tickets.html" class="sprite help_icon" title="Aide"></a></li>
+	<li class="" data-group-id="reselling" style="display: none;"><a href="/gold/reselling_payment.php" class="sprite reselling_icon" title="Revente"></a></li>
+</ul>		</div>
+		<div id="member_menu">
+			
+<style type="text/css">
+#member_menu .submenu {text-align: center;}
+#member_menu a.active {font-weight: normal;}
+</style>
+
+			<div class="submenu">
+            <a href="/status_storage.html" target="_blank">Créez votre propre disque personnel en ligne de 25 Go gratuitement!</a>
+		</div>
+			</div>
+		
+				
+				<div class="content right">
+										<div class="sidebar sidebar_right">
+						<div align="center" style="position:relative;">
+		<iframe id="ads_z4_frame" width="240px" height="600px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" hspace="0" vspace="0"></iframe>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#ads_z4_frame').attr('src', 'http://ads.depositfiles.com/ad.php?z=4&c=FR');
+		});
+	</script>
+
+</div>
+				</div>
+					</div>
+				
+		<div class="content left body">
+										
+				<iframe id="ads_z8_frame" width="1px" height="1px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" hspace="0" vspace="0"></iframe>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#ads_z8_frame').attr('src', 'http://ads.depositfiles.com/ad.php?z=8&c=FR&g=gateway&u=54c786e81d69b');
+			});
+		</script>
+			
+				<div class="banner1" style="text-align:center;">
+				<iframe id="ads_z6_frame" width="728px" height="91px" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" hspace="0" vspace="0"></iframe>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#ads_z6_frame').attr('src', 'http://ads.depositfiles.com/ad.php?z=6&c=FR&g=gateway');
+			});
+		</script>
+		</div>
+		
+			
+										<div class="content_body">
+					
+<script type="text/javascript" src="https://static.depositfiles.com/js/download_utils.js"></script>
+<script type="text/javascript" src="https://static.depositfiles.com/js/gold_offer.js"></script>
+<script type="text/javascript">
+var begin_popup_url = '';
+
+  function scroll_downloadblock() {
+	var top = (!!window.opera) ? 'html' : 'html, body';
+	$(top).animate({scrollTop: $('div.downloadblock').offset().top-3}, 100);
+  }
+
+</script>
+
+	 	
+
+
+
+		
+<div class="downloadblock">
+	
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('.file_info .file_icon').addClass(DFUtils.getFileType($('.file_info .file_name b').attr('title')));
+});
+
+</script>
+
+
+
+<div class="string">
+		<div class="string_title"><b>Téléchargement du fichier </b></div>
+			<div class="report">
+			<a href="https://depositfiles.com/static.php?file=abuse_copyr&amp;file_id=iwuf30bkz">Signaler un abus</a>
+		</div>
+		</div>
+
+	<div class="info">
+		<div class="file_info">
+			<span class="sprite64 file_icon"></span>
+			<div class="file">
+								<script type="text/javascript">eval( unescape('%u0064%u006F%u0063%u0075%u006D%u0065%u006E%u0074%u002E%u0077%u0072%u0069%u0074%u0065%u0028%u0027%u003C%u0064%u0069%u0076%u0020%u0063%u006C%u0061%u0073%u0073%u003D%u0022%u0066%u0069%u006C%u0065%u005F%u006E%u0061%u006D%u0065%u0022%u003E%u004E%u006F%u006D%u0020%u0064%u0075%u0020%u0066%u0069%u0063%u0068%u0069%u0065%u0072%u003A%u0020%u003C%u0062%u0020%u0074%u0069%u0074%u006C%u0065%u003D%u0022%u0031%u0062%u006E%u005F%u0047%u0061%u006E%u0067%u0062%u0061%u006E%u0067%u002E%u0045%u0078%u0074%u0072%u0065%u006D%u002E%u0047%u0065%u0072%u006D%u0061%u006E%u002E%u0058%u0058%u0058%u002E%u0044%u0056%u0044%u0052%u0069%u0070%u002E%u0078%u0032%u0036%u0034%u002D%u0043%u0048%u0069%u004B%u0041%u004E%u0069%u002E%u006D%u0070%u0037%u0022%u003E%u0031%u0062%u006E%u005F%u0047%u0061%u006E%u0067%u0062%u0061%u006E%u0067%u002E%u0045%u0078%u0074%u0072%u0065%u006D%u002E%u0047%u0065%u0072%u006D%u0061%u006E%u002E%u0058%u0058%u0058%u002E%u0044%u0056%u0044%u0052%u0069%u0070%u002E%u0078%u0032%u0036%u0034%u002D%u0043%u0048%u0069%u004B%u0041%u004E%u0069%u002E%u006D%u0070%u0037%u003C%u002F%u0062%u003E%u003C%u002F%u0064%u0069%u0076%u003E%u0027%u0029%u003B'));</script>
+				<div class="file_size">Taille du fichier: <b>1.22&nbsp;GB</b></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+        						<div class="gold_speed_promo_block hide_download_started">
+								Durée moyenne du téléchargement en <strong>mode régulier</strong>: 534 minute, <a href="#" onclick="show_gold_offer(''); return false;">en étant membre Gold - 15 minute</a>
+		</div>
+				</div>
+	<div class="violation">
+	Si vous remarquez une violation de <a href="https://depositfiles.com/agreem.html" target="_blank">l'Accord d’utilisateur</a> (y compris la violation du droit d'auteur), nous vous proposons de <a href="https://depositfiles.com/tickets/?abuse&file_id=iwuf30bkz" target="_blank">cliquez ici</a> et veuillez nous informer de toute forme de mauvais traitements ou tout autre acte illégal
+commis  par les utilisateurs. Tous vos commentaires seront les bienvenus.</div>			<div class="subscribe_offer_banner_container">
+		<img class="subscribe_offer subscribe_offer_banner" src="https://static.depositfiles.com/images/frsubscribe.gif">
+		</div>
+		
+		<style>
+			.subscribe_offer_banner_container { width: 728px; margin: 10px auto; }
+			.subscribe_offer_banner { display: border: 1px solid #ddd; }
+			.subscribe_offer_banner:hover { cursor: pointer; }
+		</style>
+		<script type="text/javascript">
+		
+			$(document).ready(function(){
+				$('img.subscribe_offer').click(function(){
+					if (window.free_download_special) 
+						window.free_download_special();
+				});	
+			});
+		</script>
+		
+
+		
+
+	<div class="chousetype">
+				        
+	
+
+		<div class="caption">Choisissez votre mode de téléchargement:</div>
+
+		<table class="chousetype">
+		<tr >
+						<td><img src="https://static.depositfiles.com/images/speed_small_gold.gif" /></td>
+			<td><img src="https://static.depositfiles.com/images/speed_small.gif" /></td>
+					</tr>
+		<tr class="download_url">
+							<td>
+									<a class="df_button" 
+						
+						onClick="window.open('/gold/payment.php')"
+					><span class="sprite download_icon"></span>&nbsp;<span>Téléchargement GOLD</span></a>
+				</td>
+			
+			<td>
+				<a class="df_button" id="free_btn"><span class="sprite download_icon"></span>&nbsp;<span>Téléchargement régulier</span></a>
+			</td>
+				
+					</tr>
+		</table>
+	</div>
+
+	
+		<div style="text-align: center; padding: 10px; display: block;" id="fr_text_promo">
+		<a href="/gold/payment.php" style="color: #FF3300;" onClick="return free_download_special();">Accès GOLD pour une semaine seulement 4,99 euro</a>
+	</div>
+		
+	<div class="choose">
+		<div id="box_big" class="box" onclick="toggle('box_big');">
+	<div class="boxtitle"><ins><span>-</span>Avantages du compte Gold</ins></div>
+	<table width="100%" cellspacing="0" cellpadding="8px" class="boxtable">
+		<tr>
+			<td class="left"></td>
+			<td><b>Hôte</b></td>
+			<td><b>Utilisateur inscrit</b></td>
+			<td><b>Utilisateur Gold</b></td>
+		</tr>
+		<tr>
+			<td class="left">Aucune annonce!</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Pas de limitation de vitesse</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Téléchargements parallèles</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td>illimité</td>
+		</tr>
+		<tr>
+			<td class="left">Aucune limite du temps entre les téléchargements</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Liens miroirs</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Pour reprendre vos téléchargements</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Gestionnaire des fichiers</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Lien pour la protection par mot de passe</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+		<tr>
+			<td class="left">Télécharger des fichiers à partir d'un serveur FTP distant ou de HTTP</td>
+			<td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+			<td><img src="https://static.depositfiles.com/images/yes.png" alt="YES"/></td>
+		</tr>
+        <tr>
+            <td class="left">Le temps de stockage s’est ecoulé depuis le dernier téléchargement</td>
+            <td><img src="https://static.depositfiles.com/images/no.png" alt="NO"/></td>
+            <td>pour 90 jours</td>
+            <td>pour 90 jours</td>
+        </tr>
+		<tr>
+			<td class="left">Le temps d’attente avant le téléchargement</td>
+			<td>60 secondes</td>
+			<td>60 secondes</td>
+			<td>Courant (urgent)</td>
+		</tr>
+		<tr>
+			<td class="left">Taille maximale d'un fichier à téléverser </td>
+			<td>10GB</td>
+			<td>10GB</td>
+			<td>10GB</td>
+		</tr>
+	</table>
+</div>
+<div id="box_small" class="box" onclick="toggle('box_small');">
+	<div class="boxtitle"><ins><span>+</span>Avantages du compte Gold</ins></div>
+</div>
+<script style="text/javascript">
+	cache_img('https://static.depositfiles.com/images/no.png');
+	cache_img('https://static.depositfiles.com/images/yes.png');
+</script>		﻿
+<style type="text/css">
+
+	#bornpay_frame_promo {font-size: 16px; padding: 0 20px 10px 20px; margin-bottom: 10px; }
+	#bornpay_frame_promo:hover {cursor: pointer}
+</style>
+<script>
+  function scroll_downloadblock() {
+	var top = (!!window.opera) ? 'html' : 'html, body';
+	$(top).animate({scrollTop: $('#bornpay_frame_promo').offset().top-3}, 100);
+  }
+</script>			
+
+
+	</div>
+
+	
+</div>
+
+				</div>
+					</div>
+						<div class="content left">
+					</div>
+				<br class="separator" />
+	</div>
+	<div id="error_messages" style="display: none;">		<span data-id="CaptchaInvalid">Captcha Invalide</span>	<span data-id="LoginInvalid">Votre mot de passe ou votre nom d'utilisateur que vous avez saisi n'est pas valide</span>	<span data-id="UnknownError">Une erreur inconnue</span>	<span data-id="InvalidInputData">Données d'entrée non valides</span>	<span data-id="errLoginRequired2">S'il vous plaît, entrez votre identifiant</span>			<span data-id="CaptchaRequired">Captcha Obligatoire</span>	<span data-id="errLoginRequired">Veuillez entrer votre nom d'utilisateur souhaité</span>	<span data-id="errPasswordRequired">Veuillez entrer votre mot de passe</span>	<span data-id="errRePasswordRequired">Veuillez entrer de nouveau votre mot de passe</span>	<span data-id="errRePasswordEqualTo">Le mot de passe et le mot de passe que vous avez entré de nouveau doivent être identiques</span>	<span data-id="errEmailRequired">Veuillez saisir votre adresse e-mail </span>	<span data-id="errEmailInvalid">Cette adresse de courrier électronique est incorrecte.</span>	<span data-id="errAgreeRequired">Pour continuer, vous devez accepter les règles de notre service</span>	<span data-id="errLoginMinValue">Please enter at least {0} characters.</span>	<span data-id="errLoginMaxValue">Please enter no more than {0} characters.</span>			<span data-id="textUnknown">Inconnu(e)</span>	<span data-id="textError">Erreur</span>	<span data-id="textComplete">Pour terminer</span>	<span data-id="textInqueue">Dans une file d'attente</span>	<span data-id="textBlocked">bloquée</span>	<span data-id="Incorrectsizeoffile">La taille du fichier est incorrecte</span>	<span data-id="Filetoosmall">Ce fichier est trop petit.</span>	<span data-id="nologs">Il n'y a pas d'enregistrement encore</span>		<span data-id="textSize">Taille</span>	<span data-id="textUploaded">Téléversé</span>	<span data-id="textStatus">Status</span>	<span data-id="textDownload">Téléchargé (s)</span>	<span data-id="textWillBeDeleted">Sera (seront) supprimé(s)</span>	<span data-id="textDownloadUrl">Télécharger URL</span>	<span data-id="textFolderName">Nom du fichier</span>	<span data-id="textFileName">Nom du fichier</span>	<span data-id="textLocation">L'emplacement</span>			<span data-id="InvalidCurrentPassword">Mot de passe actuel est incorrecte</span></div>	
+	<div style="clear: both;"></div>
+<div id="foobar" class="foobar">
+	<div class="leftbar">
+		<div class="lang_flags">
+										
+						
+							<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=ru" class="flag_ru" title="русский"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=en" class="flag_en" title="english"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=de" class="flag_de" title="deutsch"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=es" class="flag_es" title="español"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=pt" class="flag_pt" title="português"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=fr" class="flag_fr active" title="français"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=ja" class="flag_ja" title="日本語"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=nl" class="flag_nl" title="dutch"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=it" class="flag_it" title="italiano"></a>
+				<br />							<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=sv" class="flag_sv" title="svenska"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=tr" class="flag_tr" title="türkçe"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=da" class="flag_da" title="dansk"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=pl" class="flag_pl" title="polski"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=el" class="flag_el" title="ελληνικά"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=cs" class="flag_cs" title="čeština"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=zh" class="flag_zh" title="正體字"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=zs" class="flag_zs" title="简体字"></a>
+											<a href="/switch_lang.php?return_url=%2Ffiles%2Fiwuf30bkz&amp;lang=ar" class="flag_ar" title="العربية"></a>
+									</div>
+		<div class="copyright">&copy; 2006-2015 Depositfiles.com</div>
+				<div class="mobile_link"><span class="sprite mobile_icon"></span><a href="?mobile=yes">Version mobile</a></div>
+	</div>
+	
+	<div class="rightbar">
+		<dl class="agreem_list">
+			<dt>Accord et politique de confidentialité</dt>
+						<dd><a href="/agreem.html">Accord d'utilisateur</a></dd>
+			<dd><a href="/confid.html">Politique de confidentialité</a></dd>
+			<dd><a href="/abuse_copyr.html">Le droit d'auteur</a></dd>
+			<dd><a href="/payment_policy.html">Politique de paiement</a></dd>
+			<dd><a href="/recurring_policy.html">Politique de transaction récurrente</a></dd>
+			<dd><a href="/audible_magic.html">Partenariat avec Audible Magic</a></dd>
+            <dd><a href="/web_shield_limited.html">Partenariat avec Web Shield Limited</a></dd>
+		</dl>
+		<dl>
+			<dt>Centre de Support</dt>
+			<dd><a href="/faq.html">FAQ</a></dd>
+			<dd><a href="/tickets.html">Contacts</a></dd>
+			<dd><a href="/tools.html">DepositTools</a></dd>
+						<dd><a href="/suiviconso.html">Suivi conso Internet+</a></dd>
+					</dl>
+		<dl>
+			<dt>Information</dt>
+			<dd><a href="/news.php">Nouvelles</a></dd>
+			<dd><a href="/status.html">à propos de DepositFiles</a></dd>
+			<dd><a href="/status_storage.html">à propos de DepositStorage</a></dd>
+			<dd><a href="/aplace.html">Faites votre publicité ici</a></dd>
+            <dd><a href="/halileo_affiliate_program.html">Halileo Affiliate program</a></dd>
+		</dl>
+	</div>
+	<div class="clear"></div>
+	
+			
+					<div id="cellpass_console"> 
+			<div class="console_head"><a href="#" onclick="$('#cellpass_console').hide();$('#free_btn').click();return false;"></a></div>
+			<div id="cellpass_promo">
+				<img class="df_logo" src="https://static.depositfiles.com/images/logo.png" width="140" />
+				<div class="title_promo">Inscrivez-vous dès maintenant pour obtenir un accès gratuit pour 5 jours!</div>
+				<div class="clear"></div>
+			</div>
+			<div id="cellpass_frame">
+				<iframe id="cellpass_iframe" src="/payment_cellpass_subscribe.php"></iframe>
+			</div>
+			<div id="cellpass_close">
+					</div>
+		</div>
+		<style>
+			
+			#cellpass_console { background: none repeat scroll 0 0 #FFFFFF; border: 2px solid #FF3300; position: absolute; z-index: 101; display: none; min-width: 800px; min-height: 550px;}
+			#cellpass_frame { display: block; margin: 0 auto }
+			#cellpass_frame iframe {margin-top: 0; margin-left: 0;}
+			#cellpass_promo {/*width: 100%;*/ width: 560px; margin: 10px auto; text-align: center; color: #FF3300; display: block; font-size: 18px; font-weight: normal;}
+			#cellpass_promo .df_logo {float: left; margin-right: 15px;}
+			#cellpass_promo .title_promo {float: left; width: 400px;}
+			#cellpass_close { text-align: center; display: none; margin: 0 auto; width: 178px;  }	
+			#cellpass_close a {color: #FF3300; text-decoration: underline; cursor: pointer; }
+			/* IE7 */
+			*:first-child+html #cellpass_frame {margin: 0;}
+			*:first-child+html #cellpass_close {width: auto; margin: 0; text-align: center;}
+			
+		</style>
+		<script type="text/javascript">
+		window.cellpass_console_close = function() {
+			$('#cellpass_console').hide();
+			$('#free_btn').click();
+		}
+		function free_download_special() {
+						setTimeout(function(){$('#cellpass_close').show();
+				$('#cellpass_frame').css('height', '430px');
+				$('#cellpass_close').css('margin', '7px auto');
+				$('#cellpass_close a').css('font-size', '14px');	
+			}, 500);
+			
+			var body = (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+			var screen_width = $('body').outerWidth();
+						$('#cellpass_close a').css('font-size', '16px'); 
+			setTimeout(function(){$('#cellpass_close').show();}, 300);
+						$('#cellpass_console').css({
+				left: (screen_width > $('#cellpass_console').outerWidth()) ? Math.round((screen_width - $('#cellpass_console').outerWidth())/2)+'px' : '1px',
+				top: ($(window).scrollTop() + ((body.clientHeight > $('#cellpass_console').outerHeight()) ? Math.round((body.clientHeight - $('#cellpass_console').outerHeight())/2) : 1))+'px',
+				width: $('#cellpass_console').outerWidth(),
+				height: ($('#foobar').offset().top - top) + 'px'
+			});
+			$('#cellpass_iframe').css({
+				width: '800px', 
+				height: '428px'
+			});
+						
+			//$('#cellpass_iframe').attr('src', '/payment_cellpass_subscribe.php');
+			$('#cellpass_console').show();
+						window.free_download_special = null;
+			return false;
+		}
+		</script>
+    <div id="cellpass_footer" style="width: 970px; overflow: hidden; background: #fff; border-top: 1px solid #b4b4b4; color: #444; ">
+        <img style="float: right;" src="https://static.depositfiles.com/images/cellpassfr.jpg">
+                <p style="padding: 5px 10px 0;">Vous pouvez vous désabonner à tout moment selon les modalités de votre opérateur mobile sur votre compte client opérateur mobile. Clients Orange, gérez votre abonnement <a href="http://achatm.orange.fr" target="_blank">ici</a>.
+        Client SFR, gérez votre abonnement <a href="http://wap.sdp.sfr.fr" target="_blank">ici</a>. Client Bouygues, gérez votre abonnement <a href="http://wap.bougtel.fr/abo" target="_blank">ici</a>. Plus d'informations concernant l'abonnement Internet Plus Mobile:
+        <a href="http://www.infoconso-multimedia.fr" target="_blank">http://www.infoconso-multimedia.fr</a> et <a href="http://internetplus.fr" target="_blank">www.internetplus.fr</a></p>
+        <p style="padding: 3px 10px;">Au moment de valider votre achat <a href="http://dfiles.eu/agreem.html" target="_blank">vous acceptez les conditions du service</a>. Email: <a href="mailto:support@depositfiles.com">support@depositfiles.com</a>, numéro de téléphone:
+        33805110533. Tant que votre abonnement est actif, accédez à notre site <a href="http://dfiles.eu" target="_blank">WWW.DEPOSITFILES.COM</a></p>
+    </div>
+			<!-- 1422362344 -->
+</div>			<script type="text/javascript">
+var pageTracker = false;
+</script></body>
+</html>

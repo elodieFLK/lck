@@ -26,7 +26,7 @@ Class LinkChecker{
 
     const BYTE_MULTIPLICATOR = 1024;
 
-    public function __construct($link, $check_size = false){
+    public function __construct($link, $check_size = true){
         global $db;
         $this->db = $db;
         $this->check_size = $check_size;
@@ -139,12 +139,17 @@ Class LinkChecker{
     }
 
     public function getHttpResponseCode() {
-        $headers = get_headers($this->link);
-        return substr($headers[0], 9, 3);
+        if(!is_file(__DIR__."/cache/".urlencode($this->link).".headers")){
+            $headers = get_headers($this->link);
+
+            return substr($headers[0], 9, 3);
+        }
+        else{
+            return unserialize(fread(fopen(__DIR__."/cache/".urlencode($this->link).".headers", "a+"), filesize(__DIR__."/cache/".urlencode($this->link).".headers")))["http_code"];
+        }
     }
 
     public function foundHost(){
-
         $handle = fopen($this->file_host, "r");
         $contents = fread($handle, filesize($this->file_host));
         $list_host = json_decode($contents, true);
@@ -166,28 +171,37 @@ Class LinkChecker{
     }
 
     public function downloadHtmlLink(){
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->link); 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        $result = curl_exec($ch);
-        $headers = curl_getinfo($ch);
-        $curl_error = curl_error($ch);
-        $curl_errno = curl_errno($ch);
-        
+        if(!is_file(__DIR__."/cache/".urlencode($this->link).".html") || !is_file(__DIR__."/cache/".urlencode($this->link).".headers")){
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $this->link); 
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $result = curl_exec($ch);
+            $headers = curl_getinfo($ch);
+            $curl_error = curl_error($ch);
+            $curl_errno = curl_errno($ch);
+            
 
-        $this->setError(
-            array(
-                "error" => $curl_error,
-                "errno" => $curl_errno
-            ), "curl"
-        );
-        
-        $this->headers = $headers;
-        $this->HTML = $result;
-        
-        curl_close($ch);
+            $this->setError(
+                array(
+                    "error" => $curl_error,
+                    "errno" => $curl_errno
+                ), "curl"
+            );
+            
+            $this->headers = unserialize(fread(fopen(__DIR__."/cache/".urlencode($this->link).".headers", "a+"), filesize(__DIR__."/cache/".urlencode($this->link).".headers")));
+            $this->headers = $headers;
+            $this->HTML = $result;
+
+            fwrite(fopen(__DIR__."/cache/".urlencode($this->link).".html", "w+"), $this->HTML);
+            fwrite(fopen(__DIR__."/cache/".urlencode($this->link).".headers", "w+"), serialize($this->headers));
+            
+            curl_close($ch);
+        }
+        else{
+            $this->HTML = fread(fopen(__DIR__."/cache/".urlencode($this->link).".html", "a+"), filesize(__DIR__."/cache/".urlencode($this->link).".html"));
+        }
     }
 
     public function setLink($link){

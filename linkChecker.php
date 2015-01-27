@@ -11,6 +11,9 @@ require "linkChecker.class.php";
 //         var_dump($list_host);
 //         die();
 
+// $linkChecker = new linkChecker("https://1fichier.com/?4jf62b2mr4");
+// $linkChecker->is_valid(), true;
+
 $links = array(
     "https://1fichier.com/?4jf62b2mr4",
     "https://pzjcjv2sq9.1fichier.com/",
