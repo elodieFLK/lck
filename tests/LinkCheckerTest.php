@@ -1,4 +1,5 @@
 <?php
+require dirname(__DIR__)."/linkChecker.class.php";
 class phpUnit extends PHPUnit_Framework_TestCase 
 {
     public function testLink1()
@@ -49,9 +50,16 @@ class phpUnit extends PHPUnit_Framework_TestCase
         assertEquals($linkChecker->is_valid(), false);
     }
 
-    public function testFormatSize()
+    public function testFormatSizeValide()
+    {
+        $linkChecker = new linkChecker("https://pzjcjv2sq9.1fichier.com/");
+        assertEquals($linkChecker->getFormatSize(), "1.42Gb");
+    }
+
+    public function testFormatSizeInvalide()
     {
         $linkChecker = new linkChecker("https://1fichier.com/?4jf62b2mr4");
-        assertEquals($linkChecker->getFormatSize(),
+        assertEquals($linkChecker->getFormatSize(), "0Gb");
     }
+
 }
