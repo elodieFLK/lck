@@ -43,7 +43,7 @@ class phpUnit extends PHPUnit_Framework_TestCase
         assertEquals($linkChecker->is_valid(), true);
     }
 
-    public function testLink7()
+    public function testLink8()
     {
         $linkChecker = new linkChecker("http://dfiles.eu/files/fsusoerxm");
         assertEquals($linkChecker->is_valid(), false);
