@@ -11,6 +11,9 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
+//permet de ne pas vérifier le SSL
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
 //on envoi une requete post ( à enlever pour un get )
 $dataArray = array("clef" => "valeur");
 curl_setopt($ch, CURLOPT_POST, true);
@@ -38,6 +41,7 @@ switch($this->host){
         curl_setopt($ch, CURLOPT_URL, "http://www.multiup.org/api/check-file"); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         $result = curl_exec($ch);
